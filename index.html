@@ -155,7 +155,91 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <a class="sourceLine" id="cb11-18" title="18"></a>
 <a class="sourceLine" id="cb11-19" title="19"><span class="co"># Run the script</span></a>
 <a class="sourceLine" id="cb11-20" title="20"><span class="ex">./script.sh</span></a></code></pre></div>
-<p>Remember to save this script as <code>script.sh</code>, make it executable (using <code>chmod +x script.sh</code>), and then run it from the terminal.</p>
-<p>Let me know if you have any specific directory operations or file manipulations you’d like to perform. I’m happy to help!</p>
+<p><strong>1. Essential Commands</strong></p>
+<ul>
+<li><strong><code>man</code></strong>: The <em>manual</em> command. It’s your best friend! Use it to get help with any command. For example: <code>man ls</code>.</li>
+<li><strong><code>help</code></strong>: Get help with built-in shell commands (specifically for the Bash shell).</li>
+<li><strong><code>history</code></strong>: See a list of your previous commands.</li>
+<li><strong><code>clear</code></strong>: Clear the terminal screen.</li>
+<li><strong><code>exit</code></strong>: Exit the current shell session.</li>
+</ul>
+<p><strong>2. File and Directory Management</strong></p>
+<ul>
+<li><strong><code>cp -r</code></strong>: Recursively copy directories (includes subdirectories).</li>
+<li><strong><code>mv</code></strong>: Move files or rename files/directories.</li>
+<li><strong><code>rm -f</code></strong>: Forcefully remove a file without asking for confirmation. Be careful!</li>
+<li><strong><code>find</code></strong>: Search for files or directories. Example: <code>find /home/user -name "*.txt"</code> (searches for <code>.txt</code> files in <code>/home/user</code>).</li>
+<li><strong><code>grep</code></strong>: Search for text within files. Example: <code>grep "error" logfile.txt</code> (searches for the word “error” in <code>logfile.txt</code>).</li>
+<li><strong><code>cat</code></strong>: Concatenate and display files. Example: <code>cat file1.txt file2.txt</code> (concatenates and prints both files).</li>
+<li><strong><code>head</code></strong>: Display the first few lines of a file.</li>
+<li><strong><code>tail</code></strong>: Display the last few lines of a file.</li>
+<li><strong><code>ln</code></strong>: Create symbolic links or hard links.</li>
+<li><strong><code>chown</code></strong>: Change the ownership of files or directories.</li>
+<li><strong><code>chgrp</code></strong>: Change the group ownership of files or directories.</li>
+</ul>
+<p><strong>3. Process Management</strong></p>
+<ul>
+<li><strong><code>ps</code></strong>: List running processes.</li>
+<li><strong><code>top</code></strong>: Display system performance information (CPU, memory, processes).</li>
+<li><strong><code>kill</code></strong>: Terminate a process.</li>
+<li><strong><code>pkill</code></strong>: Terminate processes based on name or pattern.</li>
+<li><strong><code>jobs</code></strong>: List background jobs.</li>
+<li><strong><code>fg</code></strong>: Bring a background job to the foreground.</li>
+<li><strong><code>bg</code></strong>: Send a job to the background.</li>
+</ul>
+<p><strong>4. System Information</strong></p>
+<ul>
+<li><strong><code>uname -a</code></strong>: Display system information (kernel version, architecture, etc.).</li>
+<li><strong><code>df -h</code></strong>: Show disk usage.</li>
+<li><strong><code>free -h</code></strong>: Show memory usage.</li>
+<li><strong><code>date</code></strong>: Display the current date and time.</li>
+<li><strong><code>uptime</code></strong>: Show system uptime.</li>
+<li><strong><code>whoami</code></strong>: Display your current username.</li>
+</ul>
+<p><strong>5. Networking</strong></p>
+<ul>
+<li><strong><code>ifconfig</code></strong>: Display network interface information (IP addresses, MAC addresses).</li>
+<li><strong><code>ping</code></strong>: Test network connectivity.</li>
+<li><strong><code>netstat</code></strong>: Display network connections and statistics.</li>
+<li><strong><code>ssh</code></strong>: Secure Shell (remote access to another system).</li>
+</ul>
+<p><strong>6. Package Management (Debian/Ubuntu/Mint)</strong></p>
+<ul>
+<li><strong><code>apt-get update</code></strong>: Update the package list.</li>
+<li><strong><code>apt-get install</code></strong>: Install a package.</li>
+<li><strong><code>apt-get upgrade</code></strong>: Upgrade all installed packages.</li>
+<li><strong><code>apt-get remove</code></strong>: Remove a package.</li>
+<li><strong><code>apt-get autoremove</code></strong>: Remove unused dependencies.</li>
+<li><strong><code>apt-get autoclean</code></strong>: Remove downloaded package files.</li>
+</ul>
+<p><strong>7. Package Management (Red Hat/CentOS/Fedora)</strong></p>
+<ul>
+<li><strong><code>yum update</code></strong>: Update the package list.</li>
+<li><strong><code>yum install</code></strong>: Install a package.</li>
+<li><strong><code>yum upgrade</code></strong>: Upgrade all installed packages.</li>
+<li><strong><code>yum remove</code></strong>: Remove a package.</li>
+<li><strong><code>yum clean all</code></strong>: Remove downloaded package files.</li>
+</ul>
+<p><strong>8. Shell Scripting</strong></p>
+<ul>
+<li><strong><code>bash</code></strong>: The most common shell on Linux.</li>
+<li><strong><code>#!/bin/bash</code></strong>: Shebang line (tells the system to execute the script using <code>bash</code>).</li>
+<li><strong><code>echo</code></strong>: Print text to the terminal.</li>
+<li><strong><code>if/else</code></strong>: Conditional statements.</li>
+<li><strong><code>for</code></strong>: Looping through a list.</li>
+<li><strong><code>while</code></strong>: Looping until a condition is met.</li>
+<li><strong><code>exit</code></strong>: Exit the script.</li>
+</ul>
+<p><strong>9. Other Useful Tips</strong></p>
+<ul>
+<li><strong>Use <code>Ctrl+C</code> to interrupt a running command.</strong></li>
+<li><strong>Use <code>Ctrl+Z</code> to suspend a command.</strong></li>
+<li><strong>Use <code>Ctrl+D</code> to log out of the shell.</strong></li>
+<li><strong>Use <code>Tab</code> for autocompletion.</strong></li>
+<li><strong>Use <code>~</code> as a shortcut for your home directory.</strong></li>
+<li><strong>Use <code>.</code> (period) for the current directory.</strong></li>
+<li><strong>Use <code>..</code> (two periods) for the parent directory.</strong></li>
+<li><strong>Create aliases for frequently used commands.</strong> Example: <code>alias ll='ls -lrt'</code></li>
+</ul>
 </body>
 </html>
